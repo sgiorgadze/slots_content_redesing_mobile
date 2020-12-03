@@ -25,13 +25,12 @@ for (i = 0; i < acc.length; i++) {
 
 document.querySelector(".user_auth_block").addEventListener("click", openAuthForm);
 function openAuthForm() {
-    document.querySelector('.mobile_content').classList.add("shadow");
-    document.querySelector(".authorization_form_block").style.display = "flex"
+    document.querySelector(".authorization_modal").style.display = "block"
 }
 
 document.querySelector(".auth_form_close").addEventListener("click", closeAuthForm);
 function closeAuthForm() {
-    document.querySelector('.mobile_content').classList.remove("shadow");
-    document.querySelector(".authorization_form_block").style.display = "none"
+
+    document.querySelector(".authorization_modal").style.display = "none"
 }
 

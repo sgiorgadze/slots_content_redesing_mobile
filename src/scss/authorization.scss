@@ -1,0 +1,108 @@
+@import "partials/mixins";
+
+.user_auth_block {
+  display: flex;
+  padding: 1.63rem 2rem 1.63rem 1.4rem;
+  align-items: center;
+  background-color: #ffca2c;
+  border-radius: 0.625rem;
+  .user_auth_icon {
+    width: 3rem;
+    filter: invert(1);
+  }
+  p {
+    position: relative;
+    top: 0.1875rem;
+    margin-left: 1rem;
+    color: #000000;
+  }
+}
+
+.authorization_form_block {
+  position: fixed;
+  top: 9rem;
+  left: 50%;
+  width: 90%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  padding: 2.5rem 2.5rem 8rem;
+  background-color: #ffffff;
+  border: 1px solid #707070;
+  border-radius: 2.5rem;
+  z-index: 10000;
+  .auth_form_close {
+    width: 6rem;
+    align-self: flex-end;
+
+    .auth_form_close_icon {
+      width: 2.6425rem;
+      float: right;
+      cursor: pointer;
+    }
+  }
+  .authorization_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    .authorization_form_group {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      label {
+        color: #333d47;
+        font-size: 2.25rem;
+      }
+      .authorization_form_input {
+        height: 7.375rem;
+        margin: 1.5rem 0 2rem;
+        border: 0.0625rem solid #707070;
+        border-radius: 0.625rem;
+        text-indent: 2rem;
+        font-size: 2.625rem;
+        color: #333d47;
+      }
+      .authorization_form_link {
+        color: #3455b2;
+        font-size: 1.75rem;
+        align-self: flex-end;
+        text-decoration: underline;
+      }
+      .show_password_content {
+        position: absolute;
+        content: "";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        .show_pass_icon {
+          width: 3.35rem;
+        }
+      }
+      &.password {
+        margin-top: 4rem;
+        position: relative;
+      }
+    }
+    .authorization_btn {
+      width: 100%;
+      height: 8.8125rem;
+      margin: 3.875rem 0 7rem;
+      color: #000000;
+      font-size: 3.125rem;
+      background-color: #ffca2c;
+      border-radius: 0.625rem;
+    }
+    .registration_link {
+      color: #5772bf;
+      text-decoration: underline;
+      font-size: 2.25rem;
+    }
+  }
+}

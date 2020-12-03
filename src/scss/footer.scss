@@ -1,0 +1,131 @@
+@import "partials/mixins";
+.footer {
+  padding: 1.375rem 1.375rem 3.625rem 1.375rem;
+  background-color: #1b1c1e;
+  .lang_menu {
+    position: relative;
+    width: 100%;
+    height: 7.9375rem;
+
+    border: 1px solid #858baa;
+    border-radius: 0.625rem;
+    .lang_flag {
+      width: 3.3125rem;
+      margin-right: 1.8125rem;
+    }
+    .lang_item {
+      display: flex;
+      height: 100%;
+      padding: 0 2.25rem 0 1.875rem;
+      align-items: center;
+      cursor: pointer;
+
+      .lang_input {
+        width: 85%;
+        height: 100%;
+        outline: none;
+        border: none;
+        padding: 0;
+        font-size: 2.345rem;
+        color: #ffff;
+        background: transparent;
+        font-family: "lbet-std";
+        font-weight: 300;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2.57rem;
+      height: 100%;
+      right: 2.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("img/Group\ 1149.svg") no-repeat center;
+      background-size: 100%;
+      cursor: pointer;
+    }
+    .lang_list {
+      position: absolute;
+      display: none;
+      top: 7.9375rem;
+      width: 100%;
+      padding: 2rem 0;
+      flex-direction: column;
+      overflow-y: scroll;
+      background: #000;
+      z-index: 9999;
+      .language {
+        display: flex;
+        height: 6rem;
+        padding: 0 2.25rem 0 1.875rem;
+        align-items: center;
+        cursor: pointer;
+        .lang_name {
+          font-size: 2.345rem;
+          color: #ffff;
+
+          font-family: "lbet-std";
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .contact_buttons {
+    position: relative;
+    padding: 3.125rem 0 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    > button {
+      display: flex;
+      align-items: center;
+      width: 49%;
+      height: 7.5rem;
+      padding: 0 2.31rem;
+      border-radius: 0.625rem;
+      font-family: "lbet-std";
+
+      span {
+        margin-left: 1.4375rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    .call_btn {
+      background-color: #009788;
+      .call_btn_img {
+        width: 3.36rem;
+      }
+    }
+    .chat_btn {
+      background-color: #546f7a;
+      padding-left: 3rem;
+      .chat_btn_img {
+        width: 2.8625rem;
+      }
+    }
+  }
+  .permission_block {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.625rem 0;
+    display: flex;
+    justify-content: center;
+
+    .permission_block_img {
+      width: 7rem;
+    }
+    .permission_block_text {
+      margin-left: 2.5625rem;
+      color: #d5deef;
+      font-size: 1.875rem;
+      line-height: 1.3;
+      .permission_title {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

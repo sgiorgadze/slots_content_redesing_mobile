@@ -1,0 +1,242 @@
+@import "partials/mixins";
+.search_wrapper {
+  position: relative;
+  padding: 2rem 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .menu_btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 6rem;
+    background-color: #6f22d4;
+    border-radius: 0.625rem;
+    overflow: initial;
+    .menu_icon {
+      width: 2.93rem;
+      height: 2.93rem;
+      margin-right: 1.18rem;
+      background-image: url("./img/Component\ 13\ –\ 12.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      &.icon_close {
+        background-image: url("../../public/img/Group\ 1182.svg");
+        &::after {
+          position: absolute;
+          left: 50%;
+          bottom: -1rem;
+          transform: translateX(-50%) rotate(45deg);
+          content: "";
+          display: block;
+          width: 2.125rem;
+          height: 2.125rem;
+          background-color: #6f22d4;
+        }
+      }
+    }
+  }
+  .search_block {
+    position: relative;
+    width: 67%;
+    height: 6rem;
+    padding: 0 2rem;
+    border: 0.06rem solid #5a5f74;
+    border-radius: 0.625rem;
+    .search_input {
+      width: 90%;
+      height: 100%;
+      background-color: transparent;
+      color: #727687;
+      font-size: 1.75rem;
+      overflow: hidden;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+      width: 2.5625rem;
+      height: 2.5625rem;
+      background: url("./img/Component\ 31\ –\ 1s.svg") no-repeat center;
+      background-size: 100%;
+      cursor: pointer;
+    }
+  }
+  .sl_tournaments {
+    position: absolute;
+    display: none;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 95%;
+    height: fit-content;
+    padding: 1.25rem 1rem;
+    background-color: #31353e;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.76);
+    &.active_slMenu {
+      display: block;
+    }
+    .sl_tournaments_title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 8rem;
+      font-size: 2.375rem;
+      font-family: "lbet-mt";
+      background-color: #3b404a;
+      border-radius: 1.25rem;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 6.26rem;
+        height: 3.18rem;
+        background: url("./img/Group\ 1181.svg") no-repeat center;
+        background-size: 100%;
+        margin-right: 2rem;
+      }
+    }
+    .sl_tournaments_list {
+      //  width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1rem;
+      .sl_tournaments_item {
+        position: relative;
+        width: 48%;
+        //background-color: coral;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .sl_tournaments_link {
+          width: 80%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 2rem;
+          text-transform: uppercase;
+          padding-left: 3rem;
+          line-height: 8rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #b1bad6;
+          }
+        }
+        &::after {
+          content: attr(title);
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 5.3125rem;
+          height: 2.875rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          // padding: 1.08rem 1.6rem;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          color: #97a3cf;
+          background-color: #363c47;
+          border-radius: 1.4375rem;
+        }
+        &.new_sl {
+          &:after {
+            content: "new";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 5.3125rem;
+            height: 2.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // padding: 1.08rem 1.6rem;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            color: #ffff;
+            background-color: #ff145c;
+            border-radius: 1.4375rem;
+          }
+        }
+      }
+    }
+  }
+}
+.sl_title {
+  padding: 1.3rem;
+  font-size: 2.65rem;
+  color: #ffca2c;
+  text-transform: capitalize;
+}
+.game_list {
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  z-index: 10001;
+  .sl_item {
+    width: 48%;
+    max-width: 436px;
+    padding: 1.4rem 1rem;
+    margin-bottom: 1.25rem;
+    background-color: #33353d;
+    border-radius: 0.625rem;
+
+    .sl_item_img {
+      width: 100%;
+      padding-bottom: 70%;
+      background-color: #5a6a4b;
+      border-radius: 0.625rem;
+      overflow: hidden;
+    }
+    .sl_item_name {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1.31rem;
+      line-height: 1.3;
+      font-size: 2rem;
+      color: #ffca2a;
+      .sl_item_title {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .sl_item_subtitle {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}

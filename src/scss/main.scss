@@ -1,0 +1,92 @@
+@import "partials/mixins";
+@import "partials/reset";
+@import "partials/fonts.scss";
+
+html,
+body {
+  @include clear;
+  background-color: #202126;
+  width: 100%;
+  // height: 100%;
+  font-size: 16px;
+  font-family: "lbet-std";
+  //font-family: "lbet-mt";
+  @media (min-width: 1440px) {
+    font-size: 12px;
+  }
+  @media (max-width: 850px) {
+    font-size: 15px;
+  }
+  @media (max-width: 794px) {
+    font-size: 13px;
+  }
+  @media (max-width: 696px) {
+    font-size: 12px;
+  }
+  @media (max-width: 632px) {
+    font-size: 11px;
+  }
+  @media (max-width: 580px) {
+    font-size: 10px;
+  }
+  @media (max-width: 532px) {
+    font-size: 9px;
+  }
+  @media (max-width: 475px) {
+    font-size: 8px;
+  }
+  @media (max-width: 430px) {
+    font-size: 7px;
+  }
+  @media (max-width: 375px) {
+    font-size: 6px;
+  }
+  @media (max-width: 363px) {
+    font-size: 6px;
+  }
+}
+.mob_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  overflow: hidden;
+  .mobile_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    &.shadow {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 8000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.67;
+      }
+    }
+  }
+}
+.main {
+  padding-top: 9rem;
+}
+
+button {
+  color: #ffffff;
+  font-family: "lbet-mt";
+  font-size: 2.3125rem;
+}
+.slider_content {
+  position: relative;
+  width: 100%;
+  height: 50vw;
+  background-color: #282f54;
+}
+input {
+  border: none;
+  outline: none;
+}
